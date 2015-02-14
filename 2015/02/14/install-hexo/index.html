@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo その1 - インストール | いろいろ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Hexo のために Node.js と Git for Windows、をインストールし、最低限の設定を。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo その1 - インストール">
+<meta property="og:url" content="http://yoursite.com/2015/02/14/install-hexo/">
+<meta property="og:site_name" content="いろいろ">
+<meta property="og:description" content="Hexo のために Node.js と Git for Windows、をインストールし、最低限の設定を。">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo その1 - インストール">
+<meta name="twitter:description" content="Hexo のために Node.js と Git for Windows、をインストールし、最低限の設定を。">
+
+  
+    <link rel="alternative" href="/atom.xml" title="いろいろ" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">いろいろ</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">いろいろと</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-install-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/02/14/install-hexo/" class="article-date">
+  <time datetime="2015-02-14T10:23:30.000Z" itemprop="datePublished">Feb 14 2015</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hexo その1 - インストール
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hexo のために <a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a> と <a href="http://msysgit.github.io/" target="_blank" rel="external">Git for Windows</a>、をインストールし、最低限の設定を。<br><a id="more"></a></p>
+<h1 id="環境">環境</h1>
+<ul>
+<li>Windows 8.1 64bit</li>
+<li>非 Cygwin</li>
+</ul>
+<h1 id="インストール">インストール</h1>
+<h2 id="Node-js">Node.js</h2>
+<p>参考にしたページ</p>
+<ul>
+<li><a href="http://gihyo.jp/dev/serial/01/nodejs/0002" target="_blank" rel="external">第2回　パッケージ管理npmとアプリケーションの永続化：基礎から学ぶNode.js｜gihyo.jp … 技術評論社</a></li>
+</ul>
+<p><a href="http://nodejs.org/" target="_blank" rel="external">Node.js</a> からインストーラ (msi) 落として実行。<br>バージョンは v0.12.0<br>特に設定は不要。</p>
+<h2 id="npm">npm</h2>
+<p>ネットの記事を見るとインストールせにゃならんような記述を見かけるが、<strong>デフォルトで入る。</strong><br>スタートメニューの、”Node.js Command Prompt” を起動すると <code>npm</code> にパスが通ってる。<br><code>npm -v</code> でバージョンを確認すると、2.5.1 とのこと。</p>
+<p>以降のコマンドラインの作業は “Node.js Command Prompt” から実施。</p>
+<h2 id="git">git</h2>
+<p>そういえば、肝心の git 入れてなかったので、インストール。<br><a href="http://msysgit.github.io/" target="_blank" rel="external">Git for Windows</a></p>
+<p>シェル統合とか使わなそうなので、余計なオプションは全部はずしてインストール。<br>あと、最近は Cygwin 入れてないので、”Use Git from Windows Commnand Prompt” を選択。<br>“Check…”: 改行文字の変換だから、一番下の無変換を選択。</p>
+<p>実は一回デプロイに失敗して、再インストールした。その際、改行文字の変換を無効にしたらいすんなりデプロイできた。<br>改行文字が原因なのか、初回のインストールで何か失敗していたのかは不明。</p>
+<p>あと、Git の設定で、<code>user name</code> と <code>user.email</code> を設定しておく。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&gt; git config --global user.name "Foo BAR"</div><div class="line">&gt; git config --global user.email foo@bar.com</div></pre></td></tr></table></figure>
+
+<p>(実際は、いろいろデプロイの中でメッセージが出たから都度設定した感じ。)</p>
+<h2 id="Hexo">Hexo</h2>
+<p>参考にしたページ</p>
+<ul>
+<li><a href="http://liginc.co.jp/web/programming/server/104594" target="_blank" rel="external">所要時間3分!? Github PagesとHEXOで爆速ブログ構築してみよう！ | 株式会社LIG</a></li>
+<li><a href="http://nakajmg.github.io/blog/2014-07-21/change-generator.html" target="_blank" rel="external">JekyllからHexoに移行した | じまぐてっく</a></li>
+</ul>
+<p>npm から入れるだけ。簡単。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&gt; npm install -g hexo</div></pre></td></tr></table></figure>
+
+<h2 id="初期設定">初期設定</h2>
+<p>ブログのひな形の作成。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt; hexo init tonjiru</div><div class="line">&gt; <span class="keyword">cd</span> tonjiru</div><div class="line">&gt; npm install</div></pre></td></tr></table></figure>
+
+<p>_config.yml をいろいろ変更。<br>最低限やっておくのは、<br>ブログタイトルとかと、デプロイの設定くらいかと。</p>
+<p>ブログタイトルとか</p>
+<figure class="highlight conf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor"># Site</span></div><div class="line"><span class="label">title:</span> いろいろ</div><div class="line"><span class="label">subtitle:</span> いろいろと</div><div class="line"><span class="label">description:</span></div><div class="line"><span class="label">author:</span> Tonjiru</div><div class="line"><span class="label">email:</span></div><div class="line"><span class="label">language:</span></div></pre></td></tr></table></figure>
+
+<p>デプロイ設定</p>
+<figure class="highlight conf"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="preprocessor"># Deployment</span></div><div class="line"><span class="preprocessor">## Docs: http://hexo.io/docs/deployment.html</span></div><div class="line"><span class="title">deploy</span>:</div><div class="line">  <span class="typedef"><span class="keyword">type</span>: github</span></div><div class="line">  repo: git@github.com:tonjiru/tonjiru.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+
+<p><code>repo</code>は、SSH でいったが、HTTPS でも行けるらしい。(未検証)</p>
+<h1 id="生成_&amp;_デプロイ">生成 &amp; デプロイ</h1>
+<p><code>hexo generate</code> して <code>hexo deploy</code> するらしいけど。<code>hexo deploy -g</code> だと両方がいっぺんにできるらしい。</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&gt; hexo deploy -g</div><div class="line">中略</div><div class="line">[create] Generated: fancybox/helpers/jquery.fancybox-media.js (<span class="number">0</span>ms)</div><div class="line">[create] Generated: fancybox/helpers/jquery.fancybox-thumbs.css (<span class="number">16</span>ms)</div><div class="line">[create] Generated: fancybox/helpers/jquery.fancybox-thumbs.js (<span class="number">0</span>ms)</div><div class="line">[info] <span class="number">28</span> files generated <span class="flow">in</span> <span class="number">1</span>.<span class="number">008</span>s</div><div class="line">中略</div><div class="line">[info] Deploy done: github</div></pre></td></tr></table></figure>
+
+<p><a href="/2015/02/14/edit-hexo/">Hexo その2 - 編集</a> へ続く</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/02/14/install-hexo/" data-id="99tjympn5be9892j" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Node-js/">Node.js</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/02/14/edit-hexo/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Hexo その2 - 編集
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/02/14/hexo/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hexo その0 - ブログ乗り換えたい</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Emacs/">Emacs</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/">GitHub</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Markdown/">Markdown</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/">Node.js</a><span class="tag-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Emacs/" style="font-size: 10.00px;">Emacs</a><a href="/tags/Git/" style="font-size: 10.00px;">Git</a><a href="/tags/GitHub/" style="font-size: 15.00px;">GitHub</a><a href="/tags/Hexo/" style="font-size: 20.00px;">Hexo</a><a href="/tags/Markdown/" style="font-size: 10.00px;">Markdown</a><a href="/tags/Node-js/" style="font-size: 15.00px;">Node.js</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/02/">February 2015</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/02/14/hexo-markdown/">Hexo その4 - Markdown の実験</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/14/customize-hexo/">Hexo その3 - もっと便利に</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/14/edit-hexo/">Hexo その2 - 編集</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/14/install-hexo/">Hexo その1 - インストール</a>
+          </li>
+        
+          <li>
+            <a href="/2015/02/14/hexo/">Hexo その0 - ブログ乗り換えたい</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015 Tonjiru<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+
+  </div>
+</body>
+</html>
